@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Create Application</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="nav-title">
+Job Tracker
+</div>
+
+<a href="dashboard.html">
+<button class="secondary">Back</button>
+</a>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Create Job Application</h2>
+
+<input id="companyName" placeholder="Company Name">
+
+<input id="industry" placeholder="Industry">
+
+<input id="location" placeholder="Location">
+
+<input id="website" placeholder="Website (optional)">
+
+<input id="position" placeholder="Position">
+
+<select id="status">
+<option>Applied</option>
+<option>Interview</option>
+<option>Offer</option>
+<option>Rejected</option>
+</select>
+
+<button onclick="createApplication()">
+Create Application
+</button>
+
+</div>
+
+</div>
+
+<script src="js/api.js"></script>
+
+</body>
+
+</html>

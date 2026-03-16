@@ -1,0 +1,162 @@
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+background:#f4f6fb;
+color:#333;
+}
+
+/* NAVBAR */
+
+.navbar{
+height:60px;
+background:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 30px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.nav-title{
+font-weight:600;
+font-size:18px;
+}
+
+/* PAGE CONTAINER */
+
+.container{
+max-width:1000px;
+margin:40px auto;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* INPUTS */
+
+input,select{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+}
+
+/* BUTTONS */
+
+button{
+background:#4f7cff;
+border:none;
+color:white;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+button:hover{
+background:#3b63e0;
+}
+
+button.secondary{
+background:#666;
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th{
+text-align:left;
+padding:14px;
+border-bottom:2px solid #eee;
+font-size:14px;
+}
+
+td{
+padding:14px;
+border-bottom:1px solid #f1f1f1;
+font-size:14px;
+}
+
+tr:hover{
+background:#fafbff;
+}
+
+/* ACTION BAR */
+
+.actions{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.search{
+width:220px;
+}
+
+/* STATUS BADGES */
+
+.status{
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+}
+
+.status-applied{
+background:#e7f0ff;
+color:#4f7cff;
+}
+
+.status-interview{
+background:#fff4d6;
+color:#b88900;
+}
+
+.status-offer{
+background:#e6f8ec;
+color:#1c8c4a;
+}
+
+.status-rejected{
+background:#fdeaea;
+color:#c73b3b;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn{
+background:#ff5c5c;
+padding:6px 10px;
+font-size:12px;
+}
+
+.delete-btn:hover{
+background:#e04747;
+}
+
+/* COMPANY CELL */
+
+.company{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.company-logo{
+width:28px;
+height:28px;
+border-radius:6px;
+background:#eee;
+}
