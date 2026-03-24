@@ -22,16 +22,10 @@ jobs:
       - name: Start Spring Boot app
         run: |
           cd company
-          ./mvnw spring-boot:run > app.log 2>&1 &
-          
+          chmod +x mvnw
+          nohup ./mvnw spring-boot:run > app.log 2>&1 &
           echo "Waiting for app to start..."
-          for i in {1..30}; do
-            if curl -s http://localhost:8082/companies/count-all > /dev/null; then
-              echo "App is ready!"
-              break
-            fi
-            sleep 2
-          done
+          sleep 25
 
       - name: Run company tests
         run: |
