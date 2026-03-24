@@ -145,11 +145,16 @@
       <artifactId>jackson-databind</artifactId>
    </dependency>
 
-   <dependency>
+
+
+ <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>
-    <scope>test</scope>
-  </dependency>  
+    <scope>runtime</scope>
+  </dependency> 
+
+
+	
 
 </dependencies>
 
