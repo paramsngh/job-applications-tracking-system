@@ -1,0 +1,33 @@
+name: Company Service CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-company:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      - name: Give permission to mvnw
+        run: chmod +x company/mvnw
+
+      - name: Start Spring Boot app
+        run: |
+          cd company
+          ./mvnw spring-boot:run &
+          sleep 15
+
+      - name: Run company tests
+        run: |
+          cd company
+          ./mvnw clean test
