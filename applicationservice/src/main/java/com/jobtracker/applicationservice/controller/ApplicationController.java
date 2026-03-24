@@ -4,7 +4,7 @@ import com.jobtracker.applicationservice.entity.Application;
 import com.jobtracker.applicationservice.service.ApplicationService;
 import org.springframework.web.bind.annotation.*;
 import com.jobtracker.applicationservice.dto.CompanyDTO;
-
+import com.jobtracker.applicationservice.dto.ApplicationDTO;
 import java.util.List;
 
 @CrossOrigin(origins = "*")
@@ -50,5 +50,15 @@ public class ApplicationController {
     @GetMapping("/user/{userId}")
     public List<Application> getApplicationsByUserId(@PathVariable("userId") Long userId) {
         return applicationService.getApplicationsByUserId(userId);
+    }
+
+    @GetMapping("/application-total")
+    public Long getCountAllApplication() {
+        return applicationService.getCountAllApplications();
+    }
+
+    @GetMapping("/position-breakdown")
+    public List<ApplicationDTO> getPositionBreakdown() {
+        return applicationService.getPositionBreakdown();
     }
 }

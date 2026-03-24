@@ -36,6 +36,69 @@
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc</artifactId>
+		</dependency>
+
+
+	<dependency>
+    		<groupId>io.cucumber</groupId>
+    		<artifactId>cucumber-java</artifactId>
+    		<version>7.15.0</version>
+    		<scope>test</scope>
+	</dependency>
+
+
+
+			<dependency>
+   		 <groupId>junit</groupId>
+    	 <artifactId>junit</artifactId>
+    	 <version>4.13.2</version>
+   		 <scope>test</scope>
+	   </dependency>
+
+	   <dependency>
+    		<groupId>io.cucumber</groupId>
+    		<artifactId>cucumber-junit-platform-engine</artifactId>
+    		<version>7.15.0</version>
+    		<scope>test</scope>
+	</dependency>
+
+	<dependency>
+    	<groupId>org.junit.platform</groupId>
+   		 <artifactId>junit-platform-suite</artifactId>
+    	<version>1.10.2</version>
+    	<scope>test</scope>
+	</dependency>
+
+
+
+	<dependency>
+   		   <groupId>io.cucumber</groupId>
+    	   <artifactId>cucumber-junit</artifactId>
+   		   <version>7.15.0</version>
+    	   <scope>test</scope>
+	</dependency>
+
+	<dependency>
+    	 <groupId>io.rest-assured</groupId>
+   		 <artifactId>rest-assured</artifactId>
+   		 <version>5.4.0</version>
+   		 <scope>test</scope>
+	</dependency>
+
+
+
+	<dependency>
+   		 <groupId>io.rest-assured</groupId>
+   		 <artifactId>json-path</artifactId>
+   		 <version>5.4.0</version>
+  		  <scope>test</scope>
+	</dependency>
+
+
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -63,6 +126,24 @@
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
     </dependency>
+
+
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
+			<scope>test</scope>
+	</dependency>
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc-test</artifactId>
+			<scope>test</scope>
+	</dependency>
+
+
+	<dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+   </dependency>
 
 </dependencies>
 

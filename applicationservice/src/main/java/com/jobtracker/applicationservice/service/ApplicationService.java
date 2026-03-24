@@ -5,7 +5,10 @@ import com.jobtracker.applicationservice.repository.ApplicationRepository;
 import org.springframework.stereotype.Service;
 import com.jobtracker.applicationservice.client.CompanyClient;
 import com.jobtracker.applicationservice.dto.CompanyDTO;
+
+import java.util.ArrayList;
 import java.util.List;
+import com.jobtracker.applicationservice.dto.ApplicationDTO;
 
 @Service
 public class ApplicationService {
@@ -62,4 +65,26 @@ public class ApplicationService {
 
         return companyClient.getCompanyById(app.getCompanyId());
     }
+
+    public Long getCountAllApplications() {
+        return applicationRepository.count();
+    }
+
+    public List<ApplicationDTO> getPositionBreakdown() {
+        List<Object[]> data = applicationRepository.applicationByPosition();
+        List<ApplicationDTO> result = new ArrayList<>();
+
+        for (int i = 0; i < data.size(); i++) {
+            Object[] row = data.get(i);
+            String label = (String) row[0];
+            Long count = (Long) row[1];
+
+            result.add(new ApplicationDTO(label, count));
+
+        }
+
+        return result;
+
+    }
+
 }

@@ -3,6 +3,7 @@ package com.company.company.controller;
 import com.company.company.entity.Company;
 import com.company.company.service.CompanyService;
 import org.springframework.web.bind.annotation.*;
+import com.company.company.dto.CompanyDTO;
 
 import java.util.List;
 
@@ -46,4 +47,22 @@ public class CompanyController {
     public void deleteCompany(@PathVariable("id") Long id) {
         companyService.deleteCompany(id);
     }
+
+    @GetMapping("/count-all")
+    public Long getCompanyCount() {
+
+        return companyService.getCompanyCount();
+
+    }
+
+    @GetMapping("/group-by-location")
+    public List<CompanyDTO> getLocationBreakdown() {
+        return companyService.getLocationBreakdown();
+    }
+
+    @GetMapping("/group-by-industry")
+    public List<CompanyDTO> getIndustryBreakdown() {
+        return companyService.getIndustryBreakdown();
+    }
+
 }
